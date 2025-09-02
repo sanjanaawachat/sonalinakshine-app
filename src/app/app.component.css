@@ -1,0 +1,44 @@
+.hero-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+h2 {
+  font-weight: bold;
+}
+h2 span {
+  color: #044b56;
+  font-size: 50px;
+}
+p {
+  /* font-size: 1.5rem; */
+  font-size: large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #044b56;
+}
+
+.feature-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #ff9800;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,95 @@
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div
+    class="container position-relative d-flex align-items-center justify-content-between"
+    style="padding: 9px; width: 100%; height: auto; top: -12px"
+  >
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.webp" alt=""> -->
+      <h1
+        class="sitename"
+        style="
+          color: rgb(227, 203, 174);
+          font-size: 30px;
+          text-decoration: none;
+        "
+      >
+        Sonali Nakshine
+      </h1>
+    </a>
+    <!-- Navigation Menu -->
+    <nav id="navmenu" class="navmenu">
+      <ul [class.active]="isMenuOpen">
+        <li>
+          <a
+            routerLink="/home"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            style="color: darkcyan"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/about-us"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            style="color: darkcyan"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/clients"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            style="color: darkcyan"
+            >Clients</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/features"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            style="color: darkcyan"
+            >Features</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/services"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            style="color: darkcyan"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/contact"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            style="color: darkcyan"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <!-- Mobile toggle button -->
+      <i
+        class="mobile-nav-toggle d-xl-none bi"
+        [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"
+        style="color: white"
+        (click)="toggleMenu()"
+      ></i>
+    </nav>
+
+    <a
+      class="btn-getstarted"
+      style="text-decoration: none"
+      href="index.html#about"
+      >Get Started</a
+    >
+  </div>
+</header>
