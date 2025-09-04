@@ -1,62 +1,124 @@
-/* Basic Nav */
-.navmenu {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+/* Header base styles */
+.header {
+  width: 100%;
+  padding: 10px 0;
+  z-index: 999;
+  position: fixed;
+  top: 0;
 }
 
+/* Navigation menu */
 .navmenu ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin: 0;
   padding: 0;
-
 }
 
 .navmenu ul li a {
+  color: darkcyan;
   text-decoration: none;
-  color: #edf1f5;
-
   font-weight: 500;
   transition: 0.3s;
-  font-weight: bold;
-  font-size: large;
 }
 
-.navmenu ul li a:hover,
-.navmenu ul li a.active {
-  color: #de9830;
-  background-color: cornsilk;
+.navmenu ul li a.active,
+.navmenu ul li a:hover {
+  color: #e3cbac;
 }
 
-/* Mobile nav */
+/* Mobile toggle icon */
 .mobile-nav-toggle {
-  font-size: 28px;
+  font-size: 1.5rem;
   cursor: pointer;
-  display: none;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
+/* Get Started button */
+.btn-getstarted {
+  padding: 8px 20px;
+  background: darkcyan;
+  color: #fff;
+  border-radius: 50px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-getstarted:hover {
+  background: #e3cbac;
+  color: #000;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 1199px) {
   .navmenu ul {
-    height: 300px;
-    display: none;
-    flex-direction: column;
-    background: #fff;
     position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    width: 100%;
+    background: #0e0e0e;
+    padding: 20px;
+    transition: 0.3s;
   }
 
   .navmenu ul.active {
-    display: flex;
+    left: 0;
   }
 
-  .mobile-nav-toggle {
-    display: block;
-    color: black;
+  .navmenu ul li {
+    margin: 10px 0;
+  }
+
+  .bi-list::before {
+    content: "\f479";
+    color: white;
+  }
+  .bi::before,
+  [class^="bi-"]::before,
+  [class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @media (max-width: 1199px) {
+    .bi[_ngcontent-gxb-c113]::before,
+    [class^="bi-"][_ngcontent-gxb-c113]::before,
+    [class*=" bi-"][_ngcontent-gxb-c113]::before {
+      display: inline-block;
+      font-family: bootstrap-icons !important;
+      font-style: normal;
+      font-weight: normal !important;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      vertical-align: -0.125em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  .bi-x::before {
+    content: "\f62a";
+  }
+  .bi::before,
+  [class^="bi-"]::before,
+  [class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
